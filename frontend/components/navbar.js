@@ -25,10 +25,10 @@ const Navbar = () => (
       <a href="/register" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4">
         SignUp
       </a>
-      <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+      <a href="/Menu" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         Menu
       </a>&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+      <a href="/Order" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
         Order
       </a>&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="/logout" classNameName="block py-2 pr-4 pl-3 text-gray-700 mt-4

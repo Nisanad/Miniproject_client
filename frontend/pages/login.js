@@ -32,7 +32,7 @@ export default function Login({ token }) {
 
 
         
-                <div >
+                <div className="relative m-4 border-2 border-dashed p-4 flex flex-col">
 
                     <h3 class="text-2xl font-bold text-center ">Login to your account</h3><br></br><br></br>
                     <div>

@@ -21,7 +21,7 @@ export default function Home({ token }) {
           alt="Sample image" 
        
         />
-        <h1>11</h1>
+        
     </div>
     </div>
 </Layout>
