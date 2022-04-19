@@ -38,35 +38,39 @@ export default function Register({ token }) {
     }
 
     const registerForm = () => (
-        <div className={styles.gridContainer}>
-            <div>
+        <div className=" bg-amber-300 shadow rounded-lg lg:w-1/3  md:w-3/2 w-full p-4 mt-16 relative m-4   flex flex-col items-center justify-center">
+              <h3 class="text-2xl font-bold text-center shadow">SignUp to your account</h3><br></br><br></br>
+            <div className="text-xl font-small">
                 Username:
-            </div>
+            </div><br></br>
             <div>
                 <input type="text"
                     name="username"
-                    placeholder="username"
+                    placeholder="username" className="text-xl font-medium leading-none text-gray-800"
                     onChange={(e) => setUsername(e.target.value)}
                 />
-            </div>
+            </div><br></br>
             <div>
                 Email:
-            </div>
+            </div><br></br>
             <div>
                 <input type="email"
                     name="email"
-                    placeholder="email"
+                    placeholder="email" className="text-xl font-medium leading-none text-gray-800"
                     onChange={(e) => setEmail(e.target.value)} />
-            </div>
+            </div><br></br>
             <div>
                 Password:
-            </div>
+            </div><br></br>
             <div>
                 <input type="password"
                     name="password"
-                    placeholder="password"
+                    placeholder="password" className="text-xl font-medium leading-none text-gray-800"
                     onChange={(e) => setPassword(e.target.value)} />
-            </div>
+            </div><br></br><br></br>
+            <div>
+                    <button className="bg-amber-600 mr-4 p-2 hover:text-[#EEEEEE] rounded-lg drop-shadow-lg  font-display"  onClick={register}>Register</button>
+                </div>
 
         </div>
     )
@@ -74,29 +78,26 @@ export default function Register({ token }) {
 
     return (
         <Layout> 
-            <Navbar />
+            
             <Head>
                 <title>Register</title>
             </Head>
-            <div className={styles.container}>
+            <Navbar />
+            <div>
                
-                <h1>Register</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
+                
+                {/* <div><b>Token:</b> {token.substring(0, 15)}...
                 <button
                         onClick={() => { navigator.clipboard.writeText(token) }}>
                         Copy token
                 </button>
-                </div>
-                <br />
-            Status:  {status}
-                <br /><br />
-                <div className={styles.content}>
+                </div> */}
+                
+                <div className="flex flex-col items-center justify-center">
                     {registerForm()}
                 </div>
-
-                <div>
-                    <button onClick={register}>Register</button>
-                </div>
+ Status:  {status}
+                
             </div>
         </Layout>
     )

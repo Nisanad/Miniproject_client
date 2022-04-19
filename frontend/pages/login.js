@@ -32,28 +32,36 @@ export default function Login({ token }) {
 
 
         
-                <div className="relative m-4 border-2 border-dashed p-4 flex flex-col">
+                <div className=" bg-amber-300 shadow rounded-lg lg:w-1/3  md:w-1/2 w-full p-4 mt-16 relative m-4   flex flex-col items-center justify-center">
 
-                    <h3 class="text-2xl font-bold text-center ">Login to your account</h3><br></br><br></br>
-                    <div>
+                <div>  <img class="sm:w-1/6 sm:h-1/6 items-center " src="https://cdn-icons.flaticon.com/png/512/1943/premium/1943985.png?token=exp=1650372570~hmac=94fe9ebd8fe531e4601ac240936e0776" /> 
+                <h3 class="text-2xl font-bold text-center shadow">Login to your account</h3>
+                   
+                    </div>  
+                    <br></br><br></br>
+                    <div className="text-xl font-small">
                         Username:
-                    </div>
-                    <div>
-                        <input type="text"
-                            name="username"
-                            placeholder="username"
+                    </div><br></br>
+                    <div >
+                        <input type="text" 
+                            name="username" 
+                            placeholder="username" className="text-xl font-medium leading-none text-gray-800"
                             onChange={(e) => setUsername(e.target.value)} />
                     </div>
                     <br></br><br></br>
-                    <div>
+                    <div className="text-xl font-small">
                         Password:
-                    </div>
+                    </div><br></br>
                     <div>
                         <input type="password"
                             name="password"
-                            placeholder="password"
+                            placeholder="password"  className="text-xl font-medium leading-none text-gray-800"
                             onChange={(e) => setPassword(e.target.value)} />
                     </div>
+                    <br></br><br></br><br></br>
+                    <div>
+                    <button  className="bg-amber-600 mr-4 p-2 hover:text-[#EEEEEE] rounded-lg drop-shadow-lg  font-display" onClick={login}>Login</button>
+                </div>
                 </div>
        
 
@@ -70,20 +78,22 @@ export default function Login({ token }) {
             </Head>
 
             <Navbar />
-            <div className={styles.container}>
-                <h1>Login</h1>
-                <div><b>Token:</b> {token.substring(0, 15)}...
+            <div >
+               
+                {/* <div><b>Token:</b> {token.substring(0, 15)}...
                     <button onClick={copyText}> Copy token </button>
-                </div>
-                <br />
+                </div> */}
+               
+                
+    
+                <div className="flex flex-col items-center justify-center">
+                    {loginForm()}
+                
                 <div>
                     Status:  {status}
                 </div>
-                <br />
-                {loginForm()}
-                <div>
-                    <button onClick={login}>Login</button>
                 </div>
+                
             </div>
         </Layout>
     )
