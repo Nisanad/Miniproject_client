@@ -39,14 +39,17 @@ export default function Register({ token }) {
 
     const registerForm = () => (
         <div className=" bg-amber-300 shadow rounded-lg lg:w-1/3  md:w-3/2 w-full p-4 mt-16 relative m-4   flex flex-col items-center justify-center">
-              <h3 class="text-2xl font-bold text-center shadow">SignUp to your account</h3><br></br><br></br>
+            <div>  <img class="sm:w-1/3 sm:h-1/3 flex flex-col items-center justify-center " src="https://cdn-icons-png.flaticon.com/128/1161/1161623.png" /> 
+              <h3 class="text-2xl font-bold text-center shadow">SignUp to your account</h3>
+              </div>
+              <br></br><br></br>
             <div className="text-xl font-small">
                 Username:
             </div><br></br>
             <div>
                 <input type="text"
                     name="username"
-                    placeholder="username" className="text-xl font-medium leading-none text-gray-800"
+                    placeholder="username" className="text-xl rounded-lg  font-medium leading-none text-gray-800"
                     onChange={(e) => setUsername(e.target.value)}
                 />
             </div><br></br>
@@ -56,7 +59,7 @@ export default function Register({ token }) {
             <div>
                 <input type="email"
                     name="email"
-                    placeholder="email" className="text-xl font-medium leading-none text-gray-800"
+                    placeholder="email" className="text-xl rounded-lg  font-medium leading-none text-gray-800"
                     onChange={(e) => setEmail(e.target.value)} />
             </div><br></br>
             <div>
@@ -65,11 +68,11 @@ export default function Register({ token }) {
             <div>
                 <input type="password"
                     name="password"
-                    placeholder="password" className="text-xl font-medium leading-none text-gray-800"
+                    placeholder="password" className="text-xl rounded-lg  font-medium leading-none text-gray-800"
                     onChange={(e) => setPassword(e.target.value)} />
             </div><br></br><br></br>
             <div>
-                    <button className="bg-amber-600 mr-4 p-2 hover:text-[#EEEEEE] rounded-lg drop-shadow-lg  font-display"  onClick={register}>Register</button>
+            <a href='./login'>    <button className="bg-amber-600 mr-4 p-2 hover:text-[#EEEEEE] rounded-lg drop-shadow-lg  font-display"  onClick={register}>Register</button> </a>
                 </div>
 
         </div>
@@ -83,7 +86,7 @@ export default function Register({ token }) {
                 <title>Register</title>
             </Head>
             <Navbar />
-            <div>
+            <div className="bg-yellow-200 full-screen h-screen w-screen ">
                
                 
                 {/* <div><b>Token:</b> {token.substring(0, 15)}...
@@ -95,8 +98,9 @@ export default function Register({ token }) {
                 
                 <div className="flex flex-col items-center justify-center">
                     {registerForm()}
+                    Status:  {status}
                 </div>
- Status:  {status}
+ 
                 
             </div>
         </Layout>

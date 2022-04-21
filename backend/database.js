@@ -7,9 +7,20 @@ let users = {
     ]
 }
 
+let order = {
+    order: [{ id: 1, name: "backend", numberorder: 1 }],
+  };
+  let Menu = {
+    Menu: [{ id: 1, name: "backend", numberMenu: 1 }],
+  };
+
+
+
 const SECRET = 'your_jwt_secret'
 const NOT_FOUND = -1
 
+exports.Menu = Menu;
+exports.order = order;
 exports.users = users 
 exports.SECRET = SECRET
 exports.NOT_FOUND = NOT_FOUND
@@ -17,7 +28,9 @@ exports.NOT_FOUND = NOT_FOUND
 exports.setUsers = function(_users) { 
   users = _users;
 }
-
+exports.setMenus = function (_Menu) {
+    Menu = _Menu;
+  };
 // === validate username/password ===
 exports.isValidUser = async (username, password) => { 
     const index = users.users.findIndex(item => item.username === username) 

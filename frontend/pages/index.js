@@ -3,6 +3,7 @@ import Layout from '../components/layout'
 import Navbar from '../components/navbar'
 import styles from '../styles/Home.module.css'
 
+
 export default function Home({ token }) {
  
   return (
@@ -11,16 +12,20 @@ export default function Home({ token }) {
         <title>First Page</title>
     </Head>
   
-    <div   >
+    <div  >
     <div  >
         <Navbar />
-       
-        <img
+      <button >
+        <a href='./login'>
+           <img
           src="pizza.jpg"
-          class="w-full"
+          className="full-screen"
           alt="Sample image" 
-       
-        />
+     
+        />   </a>
+      </button>
+      
+     
         
     </div>
     </div>
